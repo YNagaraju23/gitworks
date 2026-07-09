@@ -1,0 +1,1 @@
+BDD (Behavior-Driven Development) is a software development approach where developers, testers, and business teams collaborate using simple, human-readable language to describe how an application should behave.

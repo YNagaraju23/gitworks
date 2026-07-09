@@ -1,0 +1,2 @@
+#class method
+#class method is a method that belongs to a class rather than an instance of the class. It can be called on the class itself, without needing to create an instance. Class methods are defined using the @classmethod decorator and take the class (cls) as the first parameter instead of the instance (self). They can access and modify class-level data and are often used for factory methods that create instances of the class or for methods that operate on class-level data.
