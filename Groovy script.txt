@@ -1,0 +1,139 @@
+Groovy script:
+using each
+************************
+def number=[1,2,3,4,5]
+number.each{
+    println it * 2
+}
+
+declare a number and print
+***************************
+def a=10
+println a
+
+define variable and print
+*************************
+name="NAGARAJU"
+println "name is $name"
+
+if else condition
+******************
+marks =75
+if (marks>35){
+	println "pass"
+}
+
+****
+marks =5
+if (marks>35){
+	println "pass"
+}
+else{
+    println "fail"
+}
+
+mapping data
+************
+def employee = [
+    id:101,
+    name:"John",
+    salary:50000
+]
+
+println employee.name
+
+function
+********
+def add(a,b){
+	return a+b
+}
+x=add(20,30)
+println x
+
+
+findAll one logic
+**********
+def numbers=[1,2,3,4,5,6,7,8,9,10]
+even=numbers.findAll{it%2 == 0}
+println even
+
+find logic
+**************
+def numbers=[10,2,3,4,5,6,7,8,9,10]
+even=numbers.find{it%2 == 0}
+println even
+
+
+
+try & catch
+***************
+try {
+    println 10/0
+} catch(Exception e) {
+    println e.message
+}
+
+
+reverse string
+*******************
+string="groovy"
+println string.reverse()
+
+
+count of charecters
+****************
+string="groovy"
+println string.size()
+
+
+print unique numbers
+*********************
+numbers=[1,2,3,4,5,6,7,8,8]
+println numbers.unique()
+
+o/p 1,2,3,4,5,6,7,8
+
+
+square of each element in a list
+*********************************
+numbers=[1,2,3,4,5,6,7,8,8]
+println numbers.collect{it*it}
+
+for (i in numbers){
+	println i*i
+}
+
+
+sum of the list
+****************
+numbers=[8,1,2,3,4,5,6,7,8]
+
+println numbers.sum()
+
+max of the list
+*******************
+numbers=[8,1,2,3,4,5,6,7,8]
+
+println numbers.max()
+
+closure example
+***************
+def greet={name ->
+    println "hello world $name"
+}
+greet("nagaraju")
+
+addition of two numbers using closure
+*************************************
+def add={x,y ->
+    z=x+y
+    println "hello world $z"
+}
+add(10,20)
+
+
+
+
+
+
+
