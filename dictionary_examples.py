@@ -24,4 +24,4 @@ print(data1)
 data1={ "name": "Jake", "age": 22 }
 val=data1.pop("age")
 print("value is :",val)
-print(dat1)
+print(data1)

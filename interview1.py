@@ -1,4 +1,4 @@
-words = ["eat", "tea", "eattea"]
+words = ["eat", "tea", "tan", "ate", "nat", "bat",'tab']
 result={}
 for word in words:
     key=''.join(sorted(word))

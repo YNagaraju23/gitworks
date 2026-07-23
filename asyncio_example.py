@@ -4,6 +4,13 @@ async def task(name):
     print(name)
 asyncio.run(task("A"))
 
+import asyncio
+async def task(name):
+    await asyncio.sleep(1)
+    print(name)
+asyncio.run(task("a"))
+
+
 
 
 
