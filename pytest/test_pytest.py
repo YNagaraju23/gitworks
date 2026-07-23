@@ -1,4 +1,3 @@
-
 def count(a,b):
     return a+b
 def test_check_count():
