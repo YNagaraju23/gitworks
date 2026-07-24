@@ -6,4 +6,4 @@ def perfect_square(a):
             print(i,"it's a perfect square")
 perfect_square(256)
 
-math.squre(256)
+#math.squre(256)
