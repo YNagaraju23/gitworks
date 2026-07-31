@@ -1,10 +1,8 @@
 class CallCounter:
     def __init__(self):
-        pass
-        #self.count = 0
+        self.count = 0
 
     def __call__(self, increment=1):
-        self.count=0
         self.count += increment
         return f"Total calls: {self.count}"
 
