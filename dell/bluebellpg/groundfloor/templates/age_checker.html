@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4203a9, #90b1ff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .calculator-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 450px;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 28px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #555555;
+            margin-bottom: 8px;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="date"]:focus {
+            border-color: #6a11cb;
+        }
+
+        button {
+            width: 100%;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .result-container {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .result-item {
+            font-size: 18px;
+            color: #444444;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .result-item span {
+            font-weight: 700;
+            color: #2575fc;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-card">
+        <h1>Age Calculator</h1>
+        
+        <div class="input-group">
+            <label for="dob">Select Date of Birth:</label>
+            <input type="date" id="dob">
+        </div>
+
+        <button onclick="calculateAge()">Calculate Age</button>
+
+        <div id="error" class="error-message"></div>
+
+        <div class="result-container" id="result-box" style="display: none;">
+            <div class="result-item">Years: <span id="years">0</span></div>
+            <div class="result-item">Months: <span id="months">0</span></div>
+            <div class="result-item">Days: <span id="days">0</span></div>
+        </div>
+    </div>
+
+    <script>
+        // Set maximum date constraint to today's date automatically
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('dob').setAttribute('max', today);
+
+        function calculateAge() {
+            const dobInput = document.getElementById('dob').value;
+            const errorDiv = document.getElementById('error');
+            const resultBox = document.getElementById('result-box');
+
+            // Reset view state
+            errorDiv.style.display = "none";
+            resultBox.style.display = "none";
+
+            if (!dobInput) {
+                errorDiv.innerText = "Please select a valid date.";
+                errorDiv.style.display = "block";
+                return;
+            }
+
+            const birthDate = new Date(dobInput);
+            const currentDate = new Date();
+
+            let years = currentDate.getFullYear() - birthDate.getFullYear();
+            let months = currentDate.getMonth() - birthDate.getMonth();
+            let days = currentDate.getDate() - birthDate.getDate();
+
+            // Handle day discrepancies across changing months
+            if (days < 0) {
+                months--;
+                // Fetch total days in the previous month
+                const previousMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+                days += previousMonth;
+            }
+
+            // Handle negative month values
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            // Inject metrics into DOM
+            document.getElementById('years').innerText = years;
+            document.getElementById('months').innerText = months;
+            document.getElementById('days').innerText = days;
+            
+            resultBox.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
