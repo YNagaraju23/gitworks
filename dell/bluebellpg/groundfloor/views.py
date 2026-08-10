@@ -7,4 +7,6 @@ def date_time(request):
     time=datetime.datetime.now()
     string='the time is {}'.format(time)
     return HttpResponse(string)
+def simple_view(request):
+    return render(request,"show_html.html")
 # Create your views here.

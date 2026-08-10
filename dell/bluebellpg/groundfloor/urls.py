@@ -3,5 +3,6 @@ from django.urls import path, include
 from . import views
 urlpatterns = [
     path('views/',views.index,name='index'),
-    path('date_time/',views.date_time)
+    path('date_time/',views.date_time),
+    path('show_html/',views.simple_view),
 ]
