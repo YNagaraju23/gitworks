@@ -7,4 +7,5 @@ urlpatterns = [
     path('show_html/',views.simple_view),
     path('age_check/',views.age_check),
     path('display_name/',views.display_name),
+    path('login/',views.login),
 ]

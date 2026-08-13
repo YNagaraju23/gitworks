@@ -15,4 +15,6 @@ def age_check(request):
 def display_name(request):
     context={'name':'raju'}
     return render(request, "display_name.html", context)
+def login(request):
+    return render(request,"login.html")
 # Create your views here.
