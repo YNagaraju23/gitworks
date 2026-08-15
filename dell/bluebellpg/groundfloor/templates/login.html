@@ -1,94 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+    <link rel="stylesheet" href="{% static 'css/login_style.css' %}">
+        <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #09baeb;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            width: 350px;
-            padding: 30px;
-            background: rgb(115, 119, 120);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .input {
-            margin-bottom: 20px;
-        }
-
-        .input label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .input input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        .input input:focus {
-            outline: none;
-            border-color: #15191c;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            background: #131212;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #4fde39;
+            background-image: url("{% static 'image/20251123_075103.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container" id="loginPage">
 
         <h2>Login</h2>
 
-        <form action="" method="post">
-            {% csrf_token %}
-            
+        <form id="loginForm">
+
             <div class="input">
                 <label for="email">Email</label>
+
                 <input
                     type="email"
                     id="email"
-                    name="email"
+                    name="csrf_token"
                     placeholder="Enter your email"
                     required
                 >
@@ -96,10 +38,11 @@
 
             <div class="input">
                 <label for="password">Password</label>
+
                 <input
                     type="password"
                     id="password"
-                    name="password"
+                    name="csrf_token"
                     placeholder="Enter your password"
                     required
                 >
@@ -110,6 +53,16 @@
         </form>
 
     </div>
+
+
+    <div class="container" id="success">
+
+        <h2>You logged in successfully!</h2>
+
+        <button onclick="goBack()">Go Back</button>
+
+    </div>
+    <script src="{% static 'js/login_script.js' %}"></script>
 
 </body>
 </html>

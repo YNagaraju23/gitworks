@@ -5,5 +5,5 @@ print(lst.__getitem__(3))
 dictionary={"a":2,"b":3,"c":4}
 dictionary.__setitem__("b",300)
 print(dictionary)
-dictionary._delitem__(b)
+dictionary.__delitem__("b")
 print(dictionary)
