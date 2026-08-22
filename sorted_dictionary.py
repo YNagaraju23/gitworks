@@ -4,6 +4,6 @@ students = [
     ("Charlie", 95)
 ]
 
-sorted_students = sorted(students, key=lambda x: x[1])
+sorted_students = sorted(students, key=lambda x: x[0])
 
 print(sorted_students)
