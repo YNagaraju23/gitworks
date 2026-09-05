@@ -24,4 +24,8 @@ print(data1)
 data1={ "name": "Jake", "age": 22 }
 val=data1.pop("age")
 print("value is :",val)
+<<<<<<< HEAD
+print(dat1)
+=======
 print(data1)
+>>>>>>> 96bab3c6334f4daa21158864506ea63d294fcd03
