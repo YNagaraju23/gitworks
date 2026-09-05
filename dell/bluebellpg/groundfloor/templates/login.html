@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/login_style.css' %}">
+        <style>
+        body {
+            background-image: url("{% static 'image/20251123_075103.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="loginPage">
+
+        <h2>Login</h2>
+
+        <form id="loginForm">
+
+            <div class="input">
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="csrf_token"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <div class="input">
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="csrf_token"
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+    </div>
+
+
+    <div class="container" id="success">
+
+        <h2>You logged in successfully!</h2>
+
+        <button onclick="goBack()">Go Back</button>
+
+    </div>
+    <script src="{% static 'js/login_script.js' %}"></script>
+
+</body>
+</html>

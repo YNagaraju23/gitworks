@@ -1,0 +1,21 @@
+Container Lifecycle
+•	docker run <image> – Creates and starts a container from an image.
+•	docker run -d <image> – Runs a container in detached mode (background).
+•	docker run -p 8080:80 <image> – Runs a container, mapping host port 8080 to container port 80.
+•	docker ps – Lists all currently running containers.
+•	docker ps -a – Lists all containers, including stopped ones.
+•	docker stop <container_id> – Safely stops a running container.
+•	docker start <container_id> – Restarts a previously stopped container.
+•	docker rm <container_id> – Deletes a stopped container. [1, 2, 3, 4, 5]
+Image Management
+•	docker pull <image> – Downloads an image from Docker Hub.
+•	docker images – Lists all locally downloaded images.
+•	docker build -t <name> . – Builds a custom image from a local Dockerfile.
+•	docker rmi <image_id> – Deletes a local image. [1, 2, 3, 4, 5]
+Inspecting and Debugging
+•	docker logs <container_id> – Fetches the logs of a container.
+•	docker exec -it <container_id> sh – Opens an interactive terminal inside a running container.
+•	docker inspect <container_id> – Displays detailed low-level info about a container or image. [1, 2, 3, 4, 5]
+System Cleanup
+•	docker system prune – Deletes all stopped containers, unused networks, and dangling images. [1, 2, 3, 4]
+
