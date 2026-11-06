@@ -11,7 +11,7 @@ result = [j for i in matrix for j in i]
 print(result)
 print("**********"*3)
 
-result = [[i*j for i in range(1,10)] for j in range(1,10)]
+result = [[i*j for i in range(1,11)] for j in range(1,11)]
 print(result)
 print("**********"*3)
 

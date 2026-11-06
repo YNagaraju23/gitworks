@@ -6,3 +6,9 @@ list1=[i for row in list1 for i in row]
 #result = [num for row in matrix for num in row]
 print(list1)
 #o/p: [1, 2, 3, 4, 5, 6]
+
+
+a=[('emp'),('salary'),('designation')]
+for i in a:
+    b=(f'select (*) from {i}')
+    print(b)   

@@ -16,7 +16,7 @@ print(result)
 
 print("****************")
 dict_1={"a":1,"raju":3,"b":2}
-result = {key:value for key,value in dict_1.items() if "a" in key }
+result = {key:value for key,value in dict_1.items() if "z" in key }
 print(result)
 
 print("****************")

@@ -17,6 +17,7 @@
         </table>
         <hr/>
         <form method="post">
+            {% csrf_token %}
             <title>Add event</title>
             <label for="eventBox">Event Description</label>
             <input name="eventBox" id="eventBox" required/>

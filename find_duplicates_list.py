@@ -8,3 +8,6 @@ for i in lst:
         seen.add(i)
 print(list(duplicates))
 print(list(seen))
+
+x=True
+print(int(x))

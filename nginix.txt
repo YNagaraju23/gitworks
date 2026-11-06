@@ -1,0 +1,12 @@
+flask run command :  waitress-serve --host=192.168.0.102 --port=80 app:app
+
+cd C:\nginx
+nginx.exe
+
+stop - nginx - taskkill /f /im nginx.exe
+nginx -s stop
+nginx -s quit
+
+D:\jenkin software test folder\gitworks\dell\bluebellpg\groundfloor\static
+
+public ip: 100.91.122.166
