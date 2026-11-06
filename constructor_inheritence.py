@@ -4,7 +4,7 @@ class Student:
     def print_name(self):
         print(self.name)
     def print_upper(self):
-        print(self.name.capitalize())
+        print(self.name.upper())
 class Class(Student):
     pass
 

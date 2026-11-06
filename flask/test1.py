@@ -12,3 +12,18 @@ def login():
         return redirect(url_for('home'))
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+if request.method == 'POST':
+        name = request.form['username']
+        return f"Hello {name}, POST request received"
+
+
+#FastAPI sample programs
+from fastapi import FastAPI
+app=FastAPI()
+@app.get("/")
+def read_root():
+     return {"hello":"world"}
+if __name=="__main__":
+     app.run(debug=True)

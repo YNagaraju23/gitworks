@@ -10,6 +10,10 @@ async def task(name):
     print(name)
 asyncio.run(task("a"))
 
+async def task(name):
+    await asyncio.sleep(10)
+    print(name)
+asyncio.run(task('a'))
 
 
 

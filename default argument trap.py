@@ -5,3 +5,10 @@ def add_item(item, lst=[]):#def add_item(item, lst=None)--wrong statement
 print(add_item(4))
 print(add_item(5))
 print(add_item(6))
+
+
+
+#isinstance method in python
+x=10.2
+if isinstance(x,(int,float,str)):
+    print("x is valid")

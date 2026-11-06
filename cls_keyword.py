@@ -7,3 +7,10 @@ class Employee:
     def change_company(cls, new_name):
         # Accesses and modifies the class variable via 'cls'
         cls.company_name = new_name
+
+
+class Employee:
+    company_name="abc"
+    @classmethod
+    def define_company(cls,new_name):
+        cls.company_name=new_name
