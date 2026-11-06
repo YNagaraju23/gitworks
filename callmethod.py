@@ -13,3 +13,11 @@ counter_instance = CallCounter()
 print(counter_instance())   # Output: Total calls: 1
 print(counter_instance(5))  # Output: Total calls: 6
 print(counter_instance())   # Output: Total calls: 7
+
+
+#easy method
+class A:
+    def __call__(self,a):
+        return a
+b=A()
+print(b(10))
