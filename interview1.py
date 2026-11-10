@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-words = ["eat", "tea", "eattea"]
-=======
 words = ["eat", "tea", "tan", "ate", "nat", "bat",'tab']
->>>>>>> 96bab3c6334f4daa21158864506ea63d294fcd03
 result={}
 for word in words:
     key=''.join(sorted(word))
@@ -10,3 +6,12 @@ for word in words:
         result[key]=[]
     result[key].append(word)
 print(list(result.values()))
+
+
+#diff b/w sort and sorted
+#words.sort() #sort changes that list
+#print(words)
+
+b=sorted(words) # sorted creates new list
+print(b)
+    
