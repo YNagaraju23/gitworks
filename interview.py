@@ -27,14 +27,9 @@ for i in duplicate:
 
 #  “Lakshmi”: ['Code.py']
 
-<<<<<<< HEAD
 #}
- ***********************************************
-=======
-#}***********************************************
->>>>>>> 96bab3c6334f4daa21158864506ea63d294fcd03
- import re
-words = ["eat", "tea", "tan", "ate", "nat", "bat"]
+#} import re
+    words = ["eat", "tea", "tan", "ate", "nat", "bat"]
 list1=[]
 for i in words:
     i.split()
