@@ -27,3 +27,13 @@ class Test:
         pass
 with Test() as a:
     print("the resource point is ", a)
+
+
+class A:
+    def __enter__(self):
+        print("starting...!")
+    def __exit__(self, exc, exc_type, tb):
+        print("ending...!")
+
+with A() as b:
+    print("middle...!")

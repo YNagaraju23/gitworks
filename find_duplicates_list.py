@@ -11,3 +11,14 @@ print(list(seen))
 
 x=True
 print(int(x))
+
+
+seen=[]
+unseen=[]
+for i in lst:
+    if i in unseen:
+        seen.append(i)
+    else:
+        unseen.append(i)
+print(seen)
+print(unseen)
