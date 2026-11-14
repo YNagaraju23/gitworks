@@ -1,0 +1,37 @@
+ Postgres sql notes:
+
+function: 
+Example 1:
+CREATE OR REPLACE FUNCTION increase(X integer) RETURNS integer
+language plpgsql
+AS $$
+BEGIN
+RETURN X+10;
+END;
+$$;
+
+
+select increase(5)
+
+Example 2:
+CREATE OR REPLACE FUNCTION addition(X integer, Y integer) RETURNS integer
+language plpgsql
+AS $$
+BEGIN
+  return x+y;
+END;
+$$;
+
+
+select addition(10,20)
+
+procedure syntax:
+use call keyword to call the procedure
+create or replace proc_name(x integer)
+language plpgsql
+as $$
+declare
+begin
+
+end;
+$$;
