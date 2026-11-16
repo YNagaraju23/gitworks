@@ -35,3 +35,27 @@ begin
 
 end;
 $$;
+
+# using cast function
+select cast(empId as decimal(4,3))+300 from EMPLOYEE
+select cast(empId as integer) from EMPLOYEE
+
+# :: is a casting operator
+select empId::INTEGER AS empId from EMPLOYEE
+
+#creating roles
+create role raju login password 'root';
+
+#check role status
+select rolcreatedb from pg_roles where rolname = 'select_access';
+
+# to check the table description
+\d EMPLOYEE
+
+# to check the database and size of the database
+\l+
+SELECT 
+datname AS database_name, 
+pg_size_pretty(pg_database_size(datname)) AS size
+FROM pg_database
+ORDER BY pg_database_size(datname) DESC;
