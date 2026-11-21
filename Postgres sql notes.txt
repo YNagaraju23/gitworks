@@ -36,26 +36,26 @@ begin
 end;
 $$;
 
-# using cast function
-select cast(empId as decimal(4,3))+300 from EMPLOYEE
-select cast(empId as integer) from EMPLOYEE
 
-# :: is a casting operator
-select empId::INTEGER AS empId from EMPLOYEE
 
-#creating roles
-create role raju login password 'root';
+DO $$
+DECLARE
+    num1 INT := 15;
+    num2 INT := 25;
+    total INT;
+BEGIN
+    total := num1 + num2;
 
-#check role status
-select rolcreatedb from pg_roles where rolname = 'select_access';
+    raise notice 'this is a block';
+    raise notice 'Total = %', total;
+END;
+$$;
 
-# to check the table description
-\d EMPLOYEE
 
-# to check the database and size of the database
-\l+
-SELECT 
-datname AS database_name, 
-pg_size_pretty(pg_database_size(datname)) AS size
-FROM pg_database
-ORDER BY pg_database_size(datname) DESC;
+create procedure proc_name()
+language plpgsql
+as $$
+begin 
+raise notice 'welcome to postgres';
+end;
+$$;
